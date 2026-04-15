@@ -45,7 +45,7 @@
               <button class="btn btn-outline-success" type="submit">Search</button>
             </form>
             <span class="navbar-text">Hello, {{ request.user.first_name }}!</span>
-            <a class="nav-link btn btn-outline-success" href="/logout/">Logout</a>
+            <a class="btn btn-outline-success" href="/logout/" >Logout</a>
           {% else %}
             <a class="nav-link" href="/login/">Login</a>
             <a class="nav-link" href="/register/">Register</a>
@@ -56,5 +56,15 @@
 
   {% block content %}
   {% endblock %}
+
+<script>
+setTimeout(function(){
+    let alerts = document.querySelectorAll('.alert');
+    alerts.forEach(function(alert){
+        alert.style.display = 'none';
+    });
+},3000);
+</script>
+
 </body>
 </html>
